@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/icons/logo.svg";
 import signIn from "../assets/icons/signin.svg";
 import signUp from "../assets/icons/signup.svg";
+import volume from "../assets/icons/volume.svg";
+import mute from "../assets/icons/mute.svg";
+import hamburger from "../assets/icons/hamburger.svg";
 
 const Navbar = () => {
+  let [isMute, setMute] = useState(false);
   return (
     <header className="bg-[#313134] h-[78px] fixed top-0 w-full flex">
       <nav className="flex justify-between items-center container">
@@ -17,7 +21,7 @@ const Navbar = () => {
             RENT A NUMBER <br /> FOR RECEIVING SMS
           </span>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between hidden lg:flex xl:flex">
           <ul className="flex items-center after:block after:border after:border-[#ababab] after:mx-5 after:h-[55px]">
             <li className="text-[.813rem] text-[#ababab] py-[0.5rem] px-[1rem] hover:text-white cursor-pointer">
               Pricing
@@ -42,7 +46,16 @@ const Navbar = () => {
               <option value="">eng</option>
               <option value="">rus</option>
             </select>
+            <img
+              onClick={() => setMute(!isMute)}
+              className="cursor-pointer"
+              src={isMute ? volume : mute}
+              alt="Volume"
+            />
           </div>
+        </div>
+        <div className="xl:hidden md:block sm:block lg:hidden block">
+          <img className="w-[33px]" src={hamburger} alt="Menu icon" />
         </div>
       </nav>
     </header>
