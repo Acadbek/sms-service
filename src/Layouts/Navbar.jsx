@@ -13,13 +13,16 @@ const Navbar = () => {
       <nav className="flex justify-between items-center container">
         <div className="flex items-center gap-3">
           <img src={logo} alt="Logo" />
-          <span className="font-bold text-white font-roboto tracking-[.175em] uppercase">
-            SMS SERVICE
-          </span>
-          <span className="w-[1px] border-white border-[1px] h-[32px] ml-3"></span>
-          <span className="uppercase tracking-[.13em] text-[.6rem] text-white">
-            RENT A NUMBER <br /> FOR RECEIVING SMS
-          </span>
+          <div className="lg:flex lg:gap-4 xl:flex xl:gap-4">
+            <span className="font-bold text-white font-roboto tracking-[.175em] uppercase">
+              SMS SERVICE
+            </span>
+            <span className="w-[1px] border-white border-[1px] h-[32px] hidden lg:block xl:block"></span>
+            <span className="uppercase tracking-[.13em] text-[.6rem] text-white">
+              <br className="lg:hidden xl:hidden " /> RENT A
+              NUMBER <br /> FOR RECEIVING SMS
+            </span>
+          </div>
         </div>
         <div className="flex items-center justify-between hidden lg:flex xl:flex">
           <ul className="flex items-center after:block after:border after:border-[#ababab] after:mx-5 after:h-[55px]">
