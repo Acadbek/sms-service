@@ -9,18 +9,30 @@ import hamburger from "../assets/icons/hamburger.svg";
 const Navbar = () => {
   let [isMute, setMute] = useState(false);
   return (
-    <header className="bg-[#313134] h-[78px] fixed top-0 w-full flex">
+    <header className="bg-[#313134] md:h-[78px] lg:h-[78px] h-[58px] xl:h-[78px] fixed top-0 w-full flex">
       <nav className="flex justify-between items-center container">
         <div className="flex items-center gap-3">
           <img src={logo} alt="Logo" />
           <div className="lg:flex lg:gap-4 xl:flex xl:gap-4">
-            <span className="font-bold text-white font-roboto tracking-[.175em] uppercase">
+            <span className="font-bold text-white font-roboto tracking-[.175em] uppercase md:text-[.85rem] lg:text-[1rem] xl:text-[1rem] text-[.75rem]">
               SMS SERVICE
             </span>
             <span className="w-[1px] border-white border-[1px] h-[32px] hidden lg:block xl:block"></span>
-            <span className="uppercase tracking-[.13em] text-[.6rem] text-white">
-              <br className="lg:hidden xl:hidden " /> RENT A
-              NUMBER <br /> FOR RECEIVING SMS
+            <span
+              className="uppercase 
+                tracking-[.13em] 
+                md:text-[.55rem] 
+                text-[.45rem] 
+                md:leading-[1.5] 
+                lg:leading-[1.5] 
+                xl:leading-[1.5]  
+                xl:text-[.6rem] 
+                lg:text-[.6rem] 
+                text-white"
+            >
+              <br className="lg:hidden xl:hidden " /> RENT A NUMBER
+              <br className="hidden md:hidden lg:block xl:block" /> FOR
+              RECEIVING SMS
             </span>
           </div>
         </div>
