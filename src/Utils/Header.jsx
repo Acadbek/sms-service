@@ -1,12 +1,12 @@
 import Card from "../components/Header-card";
-import { AllData } from "../Context";
+import { AllData } from "../Context/HomeContext";
 import icon from "../assets/icons/card-0.svg";
 const Header = () => {
   const [res] = AllData();
   return (
-    <div className="bg-mainImage mainBackground bg-no-repeat h-screen min-w-full bg-cover">
+    <div className="bg-mainImage mainBackground bg-no-repeat py-16 min-w-full bg-cover">
       <div className="container">
-        <h2 className="text-[3rem] font-[500] text-white pt-24 mb-7">
+        <h2 className="text-[3rem] font-[500] text-white mb-12">
           Виртуальные номера для приема СМС
         </h2>
         <p className="text-[#9e9e9e] text-[1.125rem] mb-24">
