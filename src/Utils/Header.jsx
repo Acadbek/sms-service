@@ -1,6 +1,6 @@
 import Card from "../components/Header-card";
 import { AllData } from "../Context";
-
+import icon from "../assets/icons/card-0.svg";
 const Header = () => {
   const [res] = AllData();
   return (
@@ -15,13 +15,18 @@ const Header = () => {
         </p>
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-3">
-            <Card titleSize="2rem" border="none" borderSize={0} />
+            <Card img={icon} titleSize="2rem" border="none" borderSize={0} />
           </div>
           {res.map((item) => (
-            <div className="col-span-3">
+            <div key={item.title} className="col-span-3">
               <Card arrowStyle="hidden" img={item.icon} title={item.title} />
             </div>
           ))}
+        </div>
+        <div className="text-center">
+          <button className="w-full max-w-[685px] px-[1.25rem] py-[1rem] bg-[#C9AA80] text-white mt-[3.75rem] rounded-[10px] text-center">
+            Купить прием смс на временный номер
+          </button>
         </div>
       </div>
     </div>
