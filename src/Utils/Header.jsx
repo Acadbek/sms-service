@@ -13,7 +13,7 @@ const Header = () => {
           Хотите зарегистрировать второй аккаунт телеграм или страницу в
           Инстаграм, ВК?
         </p>
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid lg:grid-cols-12 md:grid-cols-6 xl:grid-cols-12 gap-8">
           <div className="col-span-3">
             <Card img={icon} titleSize="2rem" border="none" borderSize={0} />
           </div>
