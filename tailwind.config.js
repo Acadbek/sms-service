@@ -1,14 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  mode: "jit",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    fontFamily: {
-      'roboto': ['Roboto', 'sans-serif'],
+    backgroundImage: {
+      mainImage: "url('./assets/images/banner.png')",
     },
-    container: '1200px'
+    fontFamily: {
+      roboto: ["Roboto", "sans-serif"],
+    },
+    container: "1200px",
   },
   plugins: [],
-}
+};

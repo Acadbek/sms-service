@@ -12,3 +12,6 @@
     padding: 0 15px;
   }
 }
+.mainBackground {
+  box-shadow: inset 300px -430px 200px 0 #000;
+}
