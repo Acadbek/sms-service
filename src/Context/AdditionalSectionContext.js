@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, memo, useContext, useState } from "react";
 import icon1 from "../assets/images/icon-1.png";
 import icon2 from "../assets/images/icon-2.png";
 import icon3 from "../assets/images/icon-3.png";
@@ -6,8 +6,8 @@ import icon4 from "../assets/images/icon-4.png";
 import icon5 from "../assets/images/icon-5.png";
 import icon6 from "../assets/images/icon-6.png";
 
-export const AdditionalContext = createContext();
-export const AdditionalData = () => useContext(AdditionalContext);
+export const AdditionalAspectsContext = createContext();
+export const AdditionalData = () => useContext(AdditionalAspectsContext);
 
 const AdditionalSectionContext = ({ children }) => {
   const [data, setData] = useState([
@@ -54,11 +54,12 @@ const AdditionalSectionContext = ({ children }) => {
         "Платите только за сообщение, если номер не получил сообщение, деньги возвращаются на баланс.",
     },
   ]);
+  console.log("additional");
   return (
-    <AdditionalContext.Provider value={[data, setData]}>
+    <AdditionalAspectsContext.Provider value={[data, setData]}>
       {children}
-    </AdditionalContext.Provider>
+    </AdditionalAspectsContext.Provider>
   );
 };
 
-export default AdditionalSectionContext;
+export default memo(AdditionalSectionContext);

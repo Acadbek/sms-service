@@ -1,15 +1,17 @@
 import { createContext } from "react";
-import AdditionalContext from "./AdditionalSectionContext";
+import AdditionalAspectsContext from "./AdditionalSectionContext";
 import DataContext from "./HomeContext";
-
+import SmsServicesContextProvider from "./SmsServicesContext";
 export const Context = createContext();
 
 const MainContext = ({ children }) => {
   return (
     <Context.Provider>
-      <AdditionalContext>
-        <DataContext>{children}</DataContext>
-      </AdditionalContext>
+      <AdditionalAspectsContext>
+        <SmsServicesContextProvider>
+          <DataContext>{children}</DataContext>
+        </SmsServicesContextProvider>
+      </AdditionalAspectsContext>
     </Context.Provider>
   );
 };
