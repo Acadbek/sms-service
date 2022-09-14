@@ -4,23 +4,23 @@ const TextInfoSection = () => {
   return (
     <div className="lg:flex items-start container gap-11 py-24">
       <div className="basis-2/4">
-        <h2 class="text-[1.25rem] font-bold mb-[1rem]">
+        <h2 className="text-[1.25rem] font-bold mb-[1rem]">
           Кому подойдет СМС СЕРВИС
         </h2>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Чтобы пройти регистрацию на любом сайте в 95% случаев требуется смс
           подтверждение. Что делать если вы хотите зарегистрировать второй
           рабочий аккаунт или зарегистрироваться без номера телефона потому-что
           при использовании реального номера есть большая вероятность получения
           различных смс рассылок и звонков.
         </p>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Эксперты SMS SERVICE рекомендуют использовать одноразовые номера для
           приема смс с целью защиты своих личных данных. Так же с помощью наших
           виртульных номеров вы можете зарегистрировать еще один аккаунт для
           служебных нужд.
         </p>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Этот сервис начинался как инструмент для разработчиков, позволяющий
           тестировать получение доставляемость SMS одноразовых кодов. Вскоре он
           стал популярен среди не разработчиков. Причина по которой другие люди
@@ -28,16 +28,16 @@ const TextInfoSection = () => {
           защитить свою конфиденциальность, когда онлайн-сервисы запрашивают их
           номера телефонов.
         </p>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Как получить доступ к онлайн номерам? Зарегистрируйтесь и получите
           доступ к аренде номеров для смс из более 195 стран. Все смс полученные
           на наши виртуальные номера, будут моментально отображаться в личном
           кабинете.
         </p>
-        <h2 class="text-[1.25rem] font-bold mb-[1rem] mt-[1rem]">
+        <h2 className="text-[1.25rem] font-bold mb-[1rem] mt-[1rem]">
           Как принять смс онлайн с сайта который требует подтверждение номера?
         </h2>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Чтобы получить SMS на виртуальный номер телефона нужно: <br /> 1.
           Выбрать страну номера из списка. <br /> 2. Выбрать сотового оператора
           (если это важно для вас). <br /> 3. Выбрать сайт (сервис), от которого
@@ -53,24 +53,24 @@ const TextInfoSection = () => {
         </p>
       </div>
       <div className="basis-2/4">
-        <h2 class="text-[1.25rem] font-bold mb-[1rem]">
+        <h2 className="text-[1.25rem] font-bold mb-[1rem]">
           Текст смс сообщения в личном кабинете
         </h2>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           SMS SERVICE ONLINE предоставит Вам номер телефона на который вы
           сможете отправить любую СМС и получить ее текст на нашем сайте.
         </p>
-        <h2 class="text-[1.25rem] font-bold mb-[1rem] mt-4">
+        <h2 className="text-[1.25rem] font-bold mb-[1rem] mt-4">
           Правила использования сервиса
         </h2>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           Использовать наши виртуальные номера телефона для приема смс можно в
           любых целях, исключая любую незаконную деятельность как в интернете,
           так и за пределами сети. В противном случае, ваши данные будут
           переданы в соответствующие правоохранительные органы.
         </p>
-        <h2 class="text-[1.25rem] font-bold my-[1rem]">Запрещеные SMS</h2>
-        <p class="text-[#6e6e6e] text-[.95rem] text-justify">
+        <h2 className="text-[1.25rem] font-bold my-[1rem]">Запрещеные SMS</h2>
+        <p className="text-[#6e6e6e] text-[.95rem] text-justify">
           На всех наших номерах действует автоматический фильтр, который
           блокирует смс сообщения от сайтов и сервисов с платной подпиской и
           финансовых организаций (например кредитных огранизаций, электронных

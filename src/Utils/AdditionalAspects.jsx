@@ -15,7 +15,7 @@ const AdditionalAspects = () => {
         online in your account. <br /> We have 2 types of phone numbers:
         temporary and disposable phone numbers.
       </p>
-      <div className="grid grid-cols-12 gap-12">
+      <div className="grid grid-cols-12 lg:gap-12 md:gap-12">
         {res.map((item) => (
           <div
             className="md:col-span-6 xl:col-span-6 lg:col-span-6 col-span-12"
