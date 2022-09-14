@@ -6,7 +6,7 @@ import SmsServices from "../Utils/SmsServices";
 import InformationSection from "../Utils/InformationSection";
 import TextInfoSection from "../Utils/TextInfoSection";
 import Footer from "../layouts/Footer";
-import Partners from "../components/partners";
+import Partners from "../components/Partners";
 import Navbar from "../layouts/Navbar";
 const Home = () => {
   return (
@@ -15,11 +15,21 @@ const Home = () => {
         <Navbar />
       </div>
       <Header />
-      <AdditionalAspects />
-      <SmsServices />
-      <SmsReception />
-      <InformationSection />
-      <TextInfoSection />
+      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+        <AdditionalAspects />
+      </div>
+      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+        <SmsServices />
+      </div>
+      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+        <SmsReception />
+      </div>
+      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+        <InformationSection />
+      </div>
+      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+        <TextInfoSection />
+      </div>
       <Footer />
       <Partners />
     </div>

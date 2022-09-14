@@ -2,7 +2,7 @@ import React from "react";
 
 const TextInfoSection = () => {
   return (
-    <div className="lg:flex items-start container gap-11 py-24">
+    <div className="lg:flex items-start container gap-11 py-8">
       <div className="basis-2/4">
         <h2 className="text-[1.25rem] font-bold mb-[1rem]">
           Кому подойдет СМС СЕРВИС

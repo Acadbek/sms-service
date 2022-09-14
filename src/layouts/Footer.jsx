@@ -2,15 +2,13 @@ import React from "react";
 import logo from "../assets/icons/logo.svg";
 import signIn from "../assets/icons/signin.svg";
 import signUp from "../assets/icons/signup.svg";
-import volume from "../assets/icons/volume.svg";
-import mute from "../assets/icons/mute.svg";
-import hamburger from "../assets/icons/hamburger.svg";
+
 const Footer = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white md:my-0 lg:my-0 my-8">
       <div className="container flex justify-center items-center py-4">
         <div className="flex justify-between items-center container">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 py-3">
             <img width={32} height={32} src={logo} alt="Logo" />
             <div className="lg:flex lg:gap-4 xl:flex xl:gap-4">
               <span className="font-bold text-white font-roboto tracking-[.175em] uppercase md:text-[.85rem] lg:text-[1rem] xl:text-[1rem] text-[.75rem]">
@@ -52,7 +50,7 @@ const Footer = () => {
       </div>
       <div className="border"></div>
       <div className="container py-7 lg:flex md:flex justify-between text-[#ababab] text-[.8rem] font-bold leading-[20px]">
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 lg:mt-0 md:mt-0 mt-4">
           <li>Описание возможностей</li>
           <li>Цены</li>
           <li>API</li>
@@ -70,7 +68,7 @@ const Footer = () => {
           <li>Отзывы</li>
           <li>Правила использования</li>
         </ul>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 lg:mb-0 md:mb-0 mb-4">
           <li>Запреты и ограничения</li>
           <li>Где можно использовать номера</li>
           <li>Служба поддержки</li>
