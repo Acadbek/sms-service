@@ -56,7 +56,7 @@ const Partners = () => {
           key={item.id}
           className="cursor-pointer object-cover"
           src={item.icon}
-          alt=""
+          alt="Partner's logo"
         />
       ))}
     </div>
