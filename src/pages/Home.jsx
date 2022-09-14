@@ -4,6 +4,7 @@ import AdditionalAspects from "../Utils/AdditionalAspects";
 import Header from "../Utils/Header";
 import SmsServices from "../Utils/SmsServices";
 import InformationSection from "../Utils/InformationSection";
+import TextInfoSection from "../Utils/TextInfoSection";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <SmsServices />
       <SmsReception />
       <InformationSection />
+      <TextInfoSection />
     </div>
   );
 };
