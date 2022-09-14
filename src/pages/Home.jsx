@@ -5,6 +5,7 @@ import Header from "../Utils/Header";
 import SmsServices from "../Utils/SmsServices";
 import InformationSection from "../Utils/InformationSection";
 import TextInfoSection from "../Utils/TextInfoSection";
+import Footer from "../layouts/Footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <SmsReception />
       <InformationSection />
       <TextInfoSection />
+      <Footer />
     </div>
   );
 };
