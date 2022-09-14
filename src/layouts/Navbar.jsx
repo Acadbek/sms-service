@@ -9,7 +9,7 @@ import hamburger from "../assets/icons/hamburger.svg";
 const Navbar = () => {
   let [isMute, setMute] = useState(false);
   return (
-    <header className="bg-[#313134] md:h-[78px] lg:h-[78px] h-[58px] xl:h-[78px] fixed top-0 w-full flex">
+    <header className="bg-[#313134] z-50 md:h-[78px] lg:h-[78px] h-[58px] xl:h-[78px] fixed top-0 w-full flex">
       <nav className="flex justify-between items-center container">
         <div className="flex items-center gap-3">
           <img width={32} height={32} src={logo} alt="Logo" />

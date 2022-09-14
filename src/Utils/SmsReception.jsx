@@ -12,7 +12,7 @@ const SmsReception = () => {
         </h2>
         <div className="grid grid-cols-12 gap-8">
           {res.map((item) => (
-            <div className="col-span-4">
+            <div className="lg:col-span-4 md:col-span-6 col-span-12">
               <SmsReceptionCard
                 title={item.title}
                 smallText={item.smallText}
