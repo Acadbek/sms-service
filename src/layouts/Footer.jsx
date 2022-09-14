@@ -5,7 +5,7 @@ import signUp from "../assets/icons/signup.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white md:my-0 lg:my-0 my-8">
+    <div className="bg-black text-white md:mt-8 pt-4 lg:mt-8 my-8">
       <div className="container flex justify-center items-center py-4">
         <div className="flex justify-between items-center container">
           <div className="flex items-center gap-3 py-3">
@@ -49,26 +49,26 @@ const Footer = () => {
         </div>
       </div>
       <div className="border"></div>
-      <div className="container py-7 lg:flex md:flex justify-between text-[#ababab] text-[.8rem] font-bold leading-[20px]">
-        <ul className="flex flex-col gap-2 lg:mt-0 md:mt-0 mt-4">
+      <div className="container lg:flex md:flex justify-between text-[#ababab] text-[.8rem] font-bold leading-[20px]">
+        <ul className="flex flex-col gap-2 py-4">
           <li>Описание возможностей</li>
           <li>Цены</li>
           <li>API</li>
           <li>Часто задаваемые вопросы</li>
         </ul>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 py-4">
           <li>Новости и акции</li>
           <li>Для разработчиков</li>
           <li>Как работает сервис</li>
           <li>Бесплатные номера</li>
         </ul>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 py-4">
           <li>Реферальная программа</li>
           <li>Актуальные сервисы</li>
           <li>Отзывы</li>
           <li>Правила использования</li>
         </ul>
-        <ul className="flex flex-col gap-2 lg:mb-0 md:mb-0 mb-4">
+        <ul className="flex flex-col gap-2 py-4">
           <li>Запреты и ограничения</li>
           <li>Где можно использовать номера</li>
           <li>Служба поддержки</li>
@@ -76,7 +76,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="border"></div>
-      <p className="text-center text-[10px] text-[#ccc] py-2">
+      <p className="text-center text-[10px] text-[#ccc] py-4">
         ИП Башлаев Евгений Борисович ИНН: 614550559106. ОГРН: 317619600125742
       </p>
     </div>

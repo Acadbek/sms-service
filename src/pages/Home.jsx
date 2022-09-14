@@ -15,19 +15,19 @@ const Home = () => {
         <Navbar />
       </div>
       <Header />
-      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <AdditionalAspects />
       </div>
-      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <SmsServices />
       </div>
-      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <SmsReception />
       </div>
-      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <InformationSection />
       </div>
-      <div className="lg:mt-0 md:mt-0 sm:mt-0 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <TextInfoSection />
       </div>
       <Footer />

@@ -50,7 +50,7 @@ const data = [
 
 const Partners = () => {
   return (
-    <div className="flex flex-wrap justify-between items-center gap-2 container lg:mt-0 md:mt-0 py-4">
+    <div className="flex flex-wrap justify-between items-center gap-2 container lg:my-4 md:my-4 ">
       {data.map((item) => (
         <img
           key={item.id}
