@@ -15,3 +15,20 @@
 .mainBackground {
   box-shadow: inset 300px -430px 200px 0 #000;
 }
+::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 4px;
+}
