@@ -4,8 +4,8 @@ import icon2 from "../assets/icons/infoIcon2.svg";
 import telegramIcon from "../assets/icons/telegramIcon.svg";
 const InformationSection = () => {
   return (
-    <div className="bg-black container lg:flex gap-8 text-white p-12 rounded-[10px]">
-      <div className="lg:basis-2/4 lg:pt-8 pt-4">
+    <div className="bg-black container lg:flex gap-12 text-white p-18 rounded-[10px]">
+      <div className="lg:basis-2/4 lg:pt-12 lg:pl-12 pl-0 md:pl-12 pt-8">
         <img width={25} height={25} src={icon1} alt="icon" />
         <p className="text-[1.25rem] font-bold mb-4 mt-6">
           Партнерская программа для смс-активаций
@@ -20,7 +20,7 @@ const InformationSection = () => {
           реферальную ссылку и размещайте на своих трафиковых ресурасах
         </p>
       </div>
-      <div className="lg:basis-2/4 lg:pt-8 py-4">
+      <div className="lg:basis-2/4 lg:pt-12 md:pr-12 pr-0 lg:pr-12 pb-12 pt-8">
         <img width={25} height={25} src={icon2} alt="" />
         <p className="text-[1.25rem] font-bold mb-4 mt-6">Скидки и новости</p>
         <p className="text-[#c7c7c7] text-[.95rem] break-words">

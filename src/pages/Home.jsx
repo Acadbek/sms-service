@@ -24,7 +24,7 @@ const Home = () => {
       <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <SmsReception />
       </div>
-      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
+      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12 mx-3">
         <InformationSection />
       </div>
       <div className="lg:mt-32 md:mt-32 mb-24 sm:mt-12 mt-12">
