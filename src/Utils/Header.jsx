@@ -24,7 +24,7 @@ const Header = () => {
           ))}
         </div>
         <div className="text-center">
-          <button className="w-full max-w-[685px] px-[1.25rem] py-[1rem] bg-[#C9AA80] text-white mt-[3.75rem] rounded-[10px] text-center">
+          <button className="w-full max-w-[685px] transition-all  px-[1.25rem] py-[1rem] bg-[#C9AA80] hover:bg-[#b49160] text-white mt-[3.75rem] rounded-[10px] text-center">
             Купить прием смс на временный номер
           </button>
         </div>

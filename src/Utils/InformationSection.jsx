@@ -35,7 +35,7 @@ const InformationSection = () => {
             alt=""
           />
         </div>
-        <button className="w-full max-w-[685px] px-[1.25rem] py-[1rem] bg-[#C9AA80] text-white mt-[3.75rem] rounded-[10px] text-center">
+        <button className="w-full hover:bg-[#b49160] transition-all  max-w-[685px] px-[1.25rem] py-[1rem] bg-[#C9AA80] text-white mt-[3.75rem] rounded-[10px] text-center">
           Номера для смс онлайн
         </button>
       </div>

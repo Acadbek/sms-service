@@ -18,7 +18,7 @@ const Home = () => {
       <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <AdditionalAspects />
       </div>
-      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
+      <div className="lg:mt-32 md:mt-16 sm:mt-12 mt-12">
         <SmsServices />
       </div>
       <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
@@ -27,7 +27,7 @@ const Home = () => {
       <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
         <InformationSection />
       </div>
-      <div className="lg:mt-12 md:mt-12 sm:mt-12 mt-12">
+      <div className="lg:mt-32 md:mt-32 mb-24 sm:mt-12 mt-12">
         <TextInfoSection />
       </div>
       <Footer />
