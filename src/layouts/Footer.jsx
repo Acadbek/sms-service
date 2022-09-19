@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/icons/logo.svg";
 import signIn from "../assets/icons/signin.svg";
 import signUp from "../assets/icons/signup.svg";
@@ -35,15 +36,20 @@ const Footer = () => {
           </div>
           <div className="flex items-center justify-between md:flex lg:flex hidden">
             <div className="flex items-center justify-between gap-[25px] w-fit">
-              <div className="flex flex-col items-center p-3 cursor-pointer gap-2 hover:text-white">
+              <NavLink
+                to={"/sign"}
+                className="flex flex-col items-center p-3 cursor-pointer gap-2 hover:text-white"
+              >
                 <img src={signIn} alt="" />
                 <p className="text-[.813rem] text-[#ababab]">Sign in</p>
-              </div>
-              <div className="border border-white h-12"></div>
-              <div className="flex flex-col items-center p-3 cursor-pointer gap-2 hover:text-white">
+              </NavLink>
+              <NavLink
+                to={"/register"}
+                className="flex flex-col items-center p-3 cursor-pointer gap-2 hover:text-white"
+              >
                 <img src={signUp} alt="" />
                 <p className="text-[.813rem] text-[#ababab]">Sign up</p>
-              </div>
+              </NavLink>
             </div>
           </div>
         </div>
