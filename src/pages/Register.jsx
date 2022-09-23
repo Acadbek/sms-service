@@ -26,8 +26,8 @@ const Register = () => {
 
   return (
     <div className="flex items-center justify-center bg-blue-400 w-full h-screen  border-2">
-      <div className="border-2 py-[20px] px-6 rounded-lg bg-white">
-        <form className="flex flex-col min-w-[600px]">
+      <div className="border-2 py-[20px] px-6 rounded-lg px-4 bg-white">
+        <form className="flex flex-col sm:min-w-[300px]  lg:min-w-[600px] md:min-w-[600px] xl:min-w-[600px]">
           <input
             className="border-b w-full border-b-slate-400 mt-4 py-2 pl-3 outline-none"
             type="text"
