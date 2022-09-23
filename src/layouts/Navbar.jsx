@@ -66,7 +66,7 @@ const Navbar = () => {
           </ul>
           <div className="flex items-center justify-between gap-[25px] w-fit">
             <NavLink
-              to={"/sign"}
+              to={"/login"}
               className="flex flex-col items-center p-3 cursor-pointer gap-2 hover:text-white"
             >
               <img src={signIn} alt="" />

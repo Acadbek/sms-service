@@ -8,7 +8,7 @@ export const Root = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/sign" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />
