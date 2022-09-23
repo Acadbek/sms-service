@@ -11,7 +11,7 @@ const Register = () => {
   const TEST_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
   const handleChange = (value) => {
-    console.log("Captcha value:");
+    console.log(`Captcha value: ${value}`);
     setValue({ value });
     if (value === null) setExpired(true);
   };
@@ -58,17 +58,25 @@ const Register = () => {
             type="password"
             placeholder="Company"
           />
-          <ReCAPTCHA
-            style={{ display: "inline-block", marginTop: "17px" }}
-            theme="dark"
-            ref={_reCaptchaRef}
-            sitekey={TEST_SITE_KEY}
-            onChange={handleChange}
-            asyncScriptOnLoad={asyncScriptOnLoad}
-          />
-          <button onChange={send} type="submit">
-            start sending
-          </button>
+          <div className="flex items-center justify-center">
+            <ReCAPTCHA
+              style={{ display: "inline-block", marginTop: "24px" }}
+              theme="dark"
+              ref={_reCaptchaRef}
+              sitekey={TEST_SITE_KEY}
+              onChange={handleChange}
+              asyncScriptOnLoad={asyncScriptOnLoad}
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <button
+              className="px-[22px] uppercase hover:bg-blue-500 transition-all w-[200px] py-3 bg-blue-400 text-white rounded-md mt-[24px]"
+              onChange={send}
+              type="submit"
+            >
+              start sending
+            </button>
+          </div>
         </form>
       </div>
     </div>
