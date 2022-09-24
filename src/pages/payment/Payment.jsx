@@ -18,7 +18,7 @@ const onSubmit = async (value) => {
 const Payment = () => {
   return (
     <Styles>
-      <h1>🏁 React Final Form</h1>
+      {/* <h1>🏁 React Final Form</h1>
       <h2>Credit Card Example</h2>
       <a href="https://github.com/erikras/react-final-form#-react-final-form">
         Read Docs
@@ -33,7 +33,7 @@ const Payment = () => {
           React Credit Cards
         </a>
         library with your form.
-      </p>
+      </p> */}
       <Form
         onSubmit={onSubmit}
         render={({

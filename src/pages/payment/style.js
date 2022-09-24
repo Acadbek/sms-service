@@ -75,19 +75,20 @@ export default styled.div`
 
   form,
   div.form {
-    text-align: left;
-    max-width: 500px;
+    /* text-align: left; */
+    max-width: 400px;
     margin: 10px auto;
     border: 1px solid #ccc;
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0.2, 0.2, 0.2, 0.3);
+    border-radius: 10px;
     position: relative;
 
     & > div {
-      display: flex;
+      /* display: flex; */
       flex-flow: row nowrap;
       line-height: 2em;
+      width: 100%;
       position: relative;
       padding: 8px 5px;
       border: 1px solid transparent;
@@ -109,9 +110,11 @@ export default styled.div`
         flex: 1;
         padding: 6px 9px;
         font-size: 1em;
-        margin-left: 15px;
+        /* margin-left: 15px; */
         border: 1px solid #ccc;
         border-radius: 3px;
+        width: 100%;
+        outline: none;
         &[disabled] {
           background: #eee;
         }
@@ -166,13 +169,13 @@ export default styled.div`
       flex-flow: row nowrap;
       justify-content: center;
     }
-    pre {
+    /* pre {
       position: relative;
       border: 1px solid #ccc;
       background: rgba(0, 0, 0, 0.1);
       box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
       padding: 20px;
-    }
+    } */
     .submitting {
       display: block;
       position: absolute;
@@ -205,7 +208,7 @@ export default styled.div`
   }
   .downshift-options {
     border: 1px solid #ddd;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     & > div {
       padding: 3px 5px;
     }
