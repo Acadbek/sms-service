@@ -78,14 +78,15 @@ export default styled.div`
     /* text-align: left; */
     max-width: 400px;
     margin: 10px auto;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0.2, 0.2, 0.2, 0.3);
+    box-shadow: 0px 0px 15px rgba(0.2, 0.2, 0.2, 0.3);
     border-radius: 10px;
     position: relative;
 
     & > div {
-      /* display: flex; */
+      display: flex;	
+      gap: 10px;
       flex-flow: row nowrap;
       line-height: 2em;
       width: 100%;
@@ -94,7 +95,7 @@ export default styled.div`
       border: 1px solid transparent;
       &.active {
         background-color: paleturquoise;
-        border-color: turquoise;
+        /* border-color: turquoise; */
       }
       & > label {
         color: #333;
@@ -107,14 +108,15 @@ export default styled.div`
       & > .downshift > input,
       & > select,
       & > textarea {
-        flex: 1;
+        /* flex: 1; */
         padding: 6px 9px;
         font-size: 1em;
         /* margin-left: 15px; */
         border: 1px solid #ccc;
-        border-radius: 3px;
+        border-radius: 8px;
         width: 100%;
         outline: none;
+        /* box-shadow: 0px 0px 2px rgba(0.2, 0.2, 0.2, 0.3); */
         &[disabled] {
           background: #eee;
         }
