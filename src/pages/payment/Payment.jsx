@@ -9,7 +9,6 @@ import {
 } from "./cardUtils";
 import logo from "../../assets/icons/logo.svg";
 
-
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
