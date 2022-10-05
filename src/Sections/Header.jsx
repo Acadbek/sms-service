@@ -1,7 +1,9 @@
 import Card from "../components/Header-card";
 import { AllData } from "../Context/HomeContext";
 import icon from "../assets/icons/card-0.svg";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   const [res] = AllData();
   return (
     <div className="bg-mainImage mainBackground bg-no-repeat py-16 min-w-full bg-cover">
@@ -24,7 +26,10 @@ const Header = () => {
           ))}
         </div>
         <div className="text-center">
-          <button className="w-full max-w-[685px] transition-all  px-[1.25rem] py-[1rem] bg-[#C9AA80] hover:bg-[#b49160] text-white mt-[3.75rem] rounded-[10px] text-center">
+          <button
+            className="w-full max-w-[685px] transition-all  px-[1.25rem] py-[1rem] bg-[#C9AA80] hover:bg-[#b49160] text-white mt-[3.75rem] rounded-[10px] text-center"
+            onClick={() => navigate("/payment")}
+          >
             Купить прием смс на временный номер
           </button>
         </div>
