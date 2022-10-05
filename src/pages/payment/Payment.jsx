@@ -12,50 +12,58 @@ import { PaymentData } from "../../Context/Payment";
 
 import { useState } from "react";
 import axios from "axios";
+import {isElementType} from "@testing-library/user-event/dist/utils";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Payment = () => {
-  const cvcRef = useRef();
-  const cardNumsRef = useRef();
-  const expiryRef = useRef();
-  const nameRef = useRef();
-  const emailRef = useRef();
+    const countryRef = useRef();
+    const cityRef = useRef();
+    const stateRef = useRef();
+    const emailRef = useRef();
+    const postalCodeRef = useRef();
+    const line1Ref = useRef();
+    const cardNumberRef = useRef();
+    const sourceRef = useRef();
+    const cvcRef = useRef();
+    const expiryRef = useRef();
+    const nameRef = useRef();
+
+
 
   const [email, setEmail] = useState();
 
   const [res] = PaymentData();
 
-  const onSubmit = async (value) => {
-    await sleep(300);
-    window.alert(JSON.stringify(value, 0, 2));
-  };
 
-  const post = async () => {
-    axios
-      .post("http://localhost:3001/payment", {
-        email: emailRef.current.value,
-        source: "asadbek",
-        name: "Share Care",
-        address: {
-          line1: "TC 9/4 Old MES colony",
-          postal_code: "110092",
-          city: "Tashkent",
-          state: "Tashkent",
-          country: "Uzbekistan",
-        },
-      })
-      .then((res) => {
-        console.log(email, "success");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
-  const [state, setState] = useState();
+    const post = async () => {
+        await fetch('http://localhost:3000/payment', {
+            method: 'POST',
+            headers: {
+                "Accept": "application/json",
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify({
+                post: {
+                    email: emailRef.current.value,
+                    source: sourceRef.current.value,
+                    name: nameRef.current.value,
+                    address: {
+                        line1: line1Ref.current.value,
+                        postal_code: postalCodeRef.current.value,
+                        city: cityRef.current.value,
+                        state: stateRef.current.value,
+                        country: countryRef.current.value,
+                    }
+                }
+            })})
+    }
 
-  console.log(state);
+    const onSubmit = async () => {
+        await post()
+    };
+
 
   return (
     <Styles>
@@ -81,14 +89,14 @@ const Payment = () => {
               />
               <div>
                 <Field
-                  ref={nameRef}
+                  ref={countryRef}
                   name="country"
                   component="input"
                   type="text"
                   placeholder="Country"
                 />
                 <Field
-                  ref={nameRef}
+                  ref={cityRef}
                   name="city"
                   component="input"
                   type="text"
@@ -97,14 +105,14 @@ const Payment = () => {
               </div>
               <div>
                 <Field
-                  ref={nameRef}
+                  ref={stateRef}
                   name="state"
                   component="input"
                   type="text"
                   placeholder="State"
                 />
                 <Field
-                  ref={nameRef}
+                  ref={postalCodeRef}
                   name="postalCode"
                   component="input"
                   type="number"
@@ -113,14 +121,14 @@ const Payment = () => {
               </div>
               <div>
                 <Field
-                  ref={nameRef}
+                  ref={emailRef}
                   name="email"
                   component="input"
                   type="email"
                   placeholder="Email"
                 />
                 <Field
-                  ref={nameRef}
+                  ref={line1Ref}
                   name="line1"
                   component="input"
                   type="text"
@@ -129,7 +137,7 @@ const Payment = () => {
               </div>
               <div>
                 <Field
-                  ref={cardNumsRef}
+                  ref={cardNumberRef}
                   name="number"
                   component="input"
                   type="text"
@@ -140,7 +148,7 @@ const Payment = () => {
               </div>
               <div>
                 <Field
-                  ref={cardNumsRef}
+                  ref={sourceRef}
                   name="source"
                   component="input"
                   type="text"
