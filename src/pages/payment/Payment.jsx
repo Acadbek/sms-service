@@ -80,15 +80,54 @@ const Payment = () => {
                 focused={active}
               />
               <div>
-                <div>
-                  <input
-                    name="email"
-                    style={{ border: "1px red solid" }}
-                    ref={emailRef}
-                    type="email"
-                    placeholder="email"
-                  />
-                </div>
+                <Field
+                  ref={nameRef}
+                  name="country"
+                  component="input"
+                  type="text"
+                  placeholder="Country"
+                />
+                <Field
+                  ref={nameRef}
+                  name="city"
+                  component="input"
+                  type="text"
+                  placeholder="City"
+                />
+              </div>
+              <div>
+                <Field
+                  ref={nameRef}
+                  name="state"
+                  component="input"
+                  type="text"
+                  placeholder="State"
+                />
+                <Field
+                  ref={nameRef}
+                  name="postalCode"
+                  component="input"
+                  type="number"
+                  placeholder="Postal Code"
+                />
+              </div>
+              <div>
+                <Field
+                  ref={nameRef}
+                  name="email"
+                  component="input"
+                  type="email"
+                  placeholder="Email"
+                />
+                <Field
+                  ref={nameRef}
+                  name="line1"
+                  component="input"
+                  type="text"
+                  placeholder="Line 1"
+                />
+              </div>
+              <div>
                 <Field
                   ref={cardNumsRef}
                   name="number"
@@ -97,6 +136,17 @@ const Payment = () => {
                   pattern="[\d| ]{16,22}"
                   placeholder="Card Number"
                   format={formatCreditCardNumber}
+                />
+              </div>
+              <div>
+                <Field
+                  ref={cardNumsRef}
+                  name="source"
+                  component="input"
+                  type="text"
+                  // pattern="[\d| ]{16,22}"
+                  placeholder="Source"
+                  // format={formatCreditCardNumber}
                 />
               </div>
               <div>
