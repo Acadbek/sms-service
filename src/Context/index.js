@@ -1,22 +1,23 @@
-import { createContext } from "react";
+import { Fragment } from "react";
 import AdditionalAspectsContext from "./AdditionalSectionContext";
 import DataContext from "./HomeContext";
 import SmsReceptionProvider from "./SmsReceptionContext";
 import SmsServicesContextProvider from "./SmsServicesContext";
-
-export const Context = createContext();
+import PaymentContext from "./Payment";
 
 const MainContext = ({ children }) => {
   return (
-    <Context.Provider>
-      <AdditionalAspectsContext>
-        <SmsServicesContextProvider>
-          <SmsReceptionProvider>
-            <DataContext>{children}</DataContext>
-          </SmsReceptionProvider>
-        </SmsServicesContextProvider>
-      </AdditionalAspectsContext>
-    </Context.Provider>
+    <Fragment>
+      <PaymentContext>
+        <AdditionalAspectsContext>
+          <SmsServicesContextProvider>
+            <SmsReceptionProvider>
+              <DataContext>{children}</DataContext>
+            </SmsReceptionProvider>
+          </SmsServicesContextProvider>
+        </AdditionalAspectsContext>
+      </PaymentContext>
+    </Fragment>
   );
 };
 

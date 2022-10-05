@@ -13,9 +13,9 @@ const Register = () => {
   const TEST_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
   const handleChange = (value) => {
-    console.log(`Captcha value: ${value}`);
+    // console.log(`Captcha value: ${value}`);
     setValue({ value });
-    console.log(submitRef.current.className + " active");
+    // console.log(submitRef.current.className + " active");
     if (value === null) setExpired(true);
   };
 

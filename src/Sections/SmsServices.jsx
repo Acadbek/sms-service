@@ -4,7 +4,7 @@ import { SmsServicesContextData } from "../Context/SmsServicesContext";
 
 const SmsServices = () => {
   const [res] = SmsServicesContextData();
-  console.log(res, "res");
+  // console.log(res, "res");
   return (
     <div className="container pb-24">
       <h2 className="text-[30px] leading-[1.3] font-bold mb-12">

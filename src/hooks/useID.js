@@ -5,6 +5,6 @@ const useUniqueID = () => {
   return id;
 };
 
-console.log(useId);
+// console.log(useId);
 
 export default useUniqueID;

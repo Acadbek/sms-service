@@ -54,7 +54,7 @@ const AdditionalSectionContext = ({ children }) => {
         "Платите только за сообщение, если номер не получил сообщение, деньги возвращаются на баланс.",
     },
   ]);
-  console.log("additional");
+  // console.log("additional");
   return (
     <AdditionalAspectsContext.Provider value={[data, setData]}>
       {children}

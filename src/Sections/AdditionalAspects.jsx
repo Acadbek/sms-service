@@ -4,7 +4,7 @@ import { AdditionalData } from "../Context/AdditionalSectionContext";
 
 const AdditionalAspects = () => {
   const [res] = AdditionalData();
-  console.log(res);
+  // console.log(res);
   return (
     <div className="container py-24">
       <h2 className="text-4xl font-bold leading-10">

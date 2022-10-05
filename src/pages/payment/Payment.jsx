@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Card from "./card";
 import Styles from "./style";
 import { Form, Field } from "react-final-form";
@@ -8,32 +8,57 @@ import {
   formatExpirationDate,
 } from "./cardUtils";
 
+import { PaymentData } from "../../Context/Payment";
+
+import { useState } from "react";
+import axios from "axios";
+
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const onSubmit = async (value) => {
-  await sleep(300);
-  window.alert(JSON.stringify(value, 0, 2));
-};
-
 const Payment = () => {
+  const cvcRef = useRef();
+  const cardNumsRef = useRef();
+  const expiryRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+
+  const [email, setEmail] = useState();
+
+  const [res] = PaymentData();
+
+  const onSubmit = async (value) => {
+    await sleep(300);
+    window.alert(JSON.stringify(value, 0, 2));
+  };
+
+  const post = async () => {
+    axios
+      .post("http://localhost:3001/payment", {
+        email: emailRef.current.value,
+        source: "asadbek",
+        name: "Share Care",
+        address: {
+          line1: "TC 9/4 Old MES colony",
+          postal_code: "110092",
+          city: "Tashkent",
+          state: "Tashkent",
+          country: "Uzbekistan",
+        },
+      })
+      .then((res) => {
+        console.log(email, "success");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const [state, setState] = useState();
+
+  console.log(state);
+
   return (
     <Styles>
-      {/* <h1>🏁 React Final Form</h1>
-      <h2>Credit Card Example</h2>
-      <a href="https://github.com/erikras/react-final-form#-react-final-form">
-        Read Docs
-      </a>
-      <p>
-        This example demonstrates how to use the amazing{" "}
-        <a
-          rel="noreferrer"
-          href="https://github.com/amarofashion/react-credit-cards"
-          target="_blank"
-        >
-          React Credit Cards
-        </a>
-        library with your form.
-      </p> */}
       <Form
         onSubmit={onSubmit}
         render={({
@@ -49,12 +74,23 @@ const Payment = () => {
               <Card
                 number={values.number || ""}
                 name={values.name || ""}
+                email={values.email || ""}
                 expiry={values.expiry || ""}
                 cvc={values.cvc || ""}
                 focused={active}
               />
               <div>
+                <div>
+                  <input
+                    name="email"
+                    style={{ border: "1px red solid" }}
+                    ref={emailRef}
+                    type="email"
+                    placeholder="email"
+                  />
+                </div>
                 <Field
+                  ref={cardNumsRef}
                   name="number"
                   component="input"
                   type="text"
@@ -65,6 +101,7 @@ const Payment = () => {
               </div>
               <div>
                 <Field
+                  ref={nameRef}
                   name="name"
                   component="input"
                   type="text"
@@ -73,6 +110,7 @@ const Payment = () => {
               </div>
               <div>
                 <Field
+                  ref={expiryRef}
                   name="expiry"
                   component="input"
                   type="text"
@@ -81,6 +119,7 @@ const Payment = () => {
                   format={formatExpirationDate}
                 />
                 <Field
+                  ref={cvcRef}
                   name="cvc"
                   component="input"
                   type="text"
@@ -90,7 +129,7 @@ const Payment = () => {
                 />
               </div>
               <div className="buttons">
-                <button type="submit" disabled={submitting}>
+                <button onClick={post} type="submit" disabled={submitting}>
                   Submit
                 </button>
                 <button
