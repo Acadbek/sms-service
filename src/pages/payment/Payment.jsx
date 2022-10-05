@@ -12,11 +12,7 @@ import logo from "../../assets/icons/logo.svg";
 import { PaymentData } from "../../Context/Payment";
 
 import { useState } from "react";
-import axios from "axios";
-import { isElementType } from "@testing-library/user-event/dist/utils";
 import { useNavigate } from "react-router-dom";
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const Payment = () => {
   const countryRef = useRef();
@@ -30,10 +26,6 @@ const Payment = () => {
   const cvcRef = useRef();
   const expiryRef = useRef();
   const nameRef = useRef();
-
-  const [email, setEmail] = useState();
-
-  const [res] = PaymentData();
 
   const post = async () => {
     await fetch("http://localhost:3000/payment", {
@@ -162,9 +154,7 @@ const Payment = () => {
                     name="source"
                     component="input"
                     type="text"
-                    // pattern="[\d| ]{16,22}"
                     placeholder="Source"
-                    // format={formatCreditCardNumber}
                   />
                 </div>
                 <div>
