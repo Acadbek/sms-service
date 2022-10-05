@@ -9,9 +9,7 @@ import {
 } from "./cardUtils";
 import logo from "../../assets/icons/logo.svg";
 
-import { PaymentData } from "../../Context/Payment";
 
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
